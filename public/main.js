@@ -18,7 +18,7 @@ const questions = [
 ];
 
 let currentQuestionIndex = 0;
-let score = 0;
+let correct = 0;
 let Incorrect = 0;
 
 function startQuiz() {
@@ -72,7 +72,7 @@ function selectAnswer(selectedOption, optionButton) {
 
 function updateScoreDisplay() {
     // document.getElementById('incorrectdisp').textContent = `Incorrect: ${incorrect}`;
-    document.getElementById('scoreDisplay').textContent = `Score: ${score}`;
+    document.getElementById('scoreDisplay').textContent = `correct: ${correct}`;
     document.getElementById('totalDisplay').textContent = `Total: ${questions.length}`;
     document.getElementById('scoreDisp').textContent = `Incorrect: ${Incorrect}`;
 
@@ -99,7 +99,7 @@ function endQuiz() {
     document.getElementById('options').innerHTML = '';
     document.getElementById('nextButton').style.display = 'none';
     document.getElementById('prevButton').style.display = 'none';
-    document.getElementById('scoreDisplay').textContent = `Final Score: ${score}`;
+    document.getElementById('scoreDisplay').textContent = `Final Score: ${correct}`;
 }
 const back = document.getElementById("return").addEventListener('click', ()=>{
     window.location.href = "./index.html";
