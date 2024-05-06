@@ -57,13 +57,13 @@ function selectAnswer(selectedOption, optionButton) {
         if (btn.textContent !== correctAnswer) {
             // btn.classList.add('blinking-text');
             btn.classList.add('red'); // Mark incorrect answers
-        }else {
-            Incorrect++;
         }
     });
     if (selectedOption === correctAnswer) {
         score++;
-    }
+    }else {
+            Incorrect++;
+        }
   
     document.getElementById('nextButton').disabled = false; // Enable the next button
     updateScoreDisplay();
