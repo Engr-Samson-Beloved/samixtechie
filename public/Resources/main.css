@@ -1,0 +1,93 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: black;
+    color: white;
+  }
+  
+  #quiz-container {
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button.disabled, button:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+    color: white;
+  }
+  #prevButton{
+    
+  }
+  #options button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  .green {
+    background-color: #4CAF50;
+  }
+  
+  .red {
+    background-color: #F44336;
+  }
+  .blinking-text {
+    animation: blink 0.4s infinite;
+  }
+  @keyframes blink{
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    50% {opacity: 1;}
+  }
+  .glow-text {
+    margin-top: -140%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    animation: glow 1s infinite alternate; /* Glowing animation */
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #ff0000; /* Red glow */
+      color: #ff0000; /* Red color */
+    }
+    33% {
+      text-shadow: 0 0 10px #00ff00; /* Green glow */
+      color: #00ff00; /* Green color */
+    }
+    66% {
+      text-shadow: 0 0 10px #0000ff; /* Blue glow */
+      color: #0000ff; /* Blue color */
+    }
+    100% {
+      text-shadow: 0 0 10px #ff0000; /* Back to red glow */
+      color: #ff0000; /* Back to red color */
+    }
+  }
+  #scoreDisp, #scoreDisplay, #totalDisplay {
+    color: black;
+    background-color: white;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    text-align: left;
+    padding: 1px;
+    font-family: 'Times New Roman', Times, serif;
+  }
