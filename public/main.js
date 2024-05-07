@@ -57,14 +57,17 @@ function selectAnswer(selectedOption, optionButton) {
         if (btn.textContent !== correctAnswer) {
             // btn.classList.add('blinking-text');
             btn.classList.add('red'); // Mark incorrect answers
+            
         }
     });
     if (selectedOption === correctAnswer) {
-        score++;
+        correct++;
     }else {
-            Incorrect++;
-        }
-  
+        Incorrect++;
+    }
+    // if (selectedOption !== correctAnswer){
+    //     Incorrect++;
+    // }
     document.getElementById('nextButton').disabled = false; // Enable the next button
     updateScoreDisplay();
 }
@@ -99,7 +102,7 @@ function endQuiz() {
     document.getElementById('options').innerHTML = '';
     document.getElementById('nextButton').style.display = 'none';
     document.getElementById('prevButton').style.display = 'none';
-    document.getElementById('scoreDisplay').textContent = `Final Score: ${correct}`;
+    document.getElementById('correctDisplay').textContent = `Final correct: ${correct}`;
 }
 const back = document.getElementById("return").addEventListener('click', ()=>{
     window.location.href = "./index.html";
