@@ -1,4 +1,29 @@
-// script.js
+let minutes = 1; // Change this to the desired minutes
+let seconds = 0; // Initial seconds
+
+// Update the countdown every second (1000 milliseconds)
+const countdownInterval = setInterval(() => {
+  // Decrement the seconds
+  seconds--;
+
+  // If seconds reach below 0, decrement minutes and reset seconds
+  if (seconds < 0) {
+    minutes--;
+    seconds = 59;
+  }
+
+  // Display the remaining time in the countdown element
+  document.getElementById('countdown').innerText = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+  // If both minutes and seconds are 0, stop the countdown and perform the action
+  if (minutes <= 0 && seconds <= 0) {
+    clearInterval(countdownInterval); // Stop the countdown
+        endQuiz();
+        document.getElementById("countdown").style.color = "red"
+        
+    // For example: document.getElementById('action-button').click();
+  }
+}, 1000); // Update every second    
 document.getElementById('startButton').addEventListener('click', startQuiz);
 
 const questions = [
@@ -26,6 +51,10 @@ function startQuiz() {
     showQuestion();
     updateScoreDisplay();
     document.getElementById('return').removeAttribute('disabled');
+    document.getElementById('Instruction').style.visibility = "hidden";
+    document.getElementById('countdown').style.color ="white";
+    document.getElementById('all').style.visibility = "visible"
+
 
 }
 
@@ -103,7 +132,8 @@ function endQuiz() {
     document.getElementById('nextButton').style.display = 'none';
     document.getElementById('prevButton').style.display = 'none';
     document.getElementById('correctDisplay').textContent = `Final correct: ${correct}`;
-}
+    document.getElementById('countdown').style.color = 'red';
+}   
 const back = document.getElementById("return").addEventListener('click', ()=>{
     window.location.href = "./index.html";
 })

@@ -41,18 +41,26 @@
 </head>
 <body>
     <div class="glow-text">Who want to be a Thousandnaire</div>
-<div id="quiz-container">
+    <div class="Instructions" id="Instruction" style="position: absolute;">
+      <h2>Instructions</h2>
+      <p>Welcome to Quiz.Net, Here You see a Lot of Trivia Questions</p>
+    </div>
+    <div id="quiz-container">
     <p id="question"></p>
     <div id="options"></div>
     <button id="prevButton" disabled>Previous</button>
     <button id="startButton">Start Quiz</button>
     <button id="nextButton" disabled>Next</button>
     <button id="return" disabled>Take Tour</button>
-    <div id="scoreDisplay"></div>
-    <div id="scoreDisp"></div>
-    <div id="totalDisplay"> </div>
+    <div id="all">
+    <div style="text-align: center; padding: 5px;" id="scoreDisplay"></div>
+    <div style="text-align: center; padding: 5px;"  id="scoreDisp"></div>
+    <div style="text-align: center; padding: 5px;"  id="totalDisplay"> </div>
+    
+    </div>
     
 </div>
+<div id="countdown">05:00</div>
 <script src="main.js"></script>
 </body>
 </html>
