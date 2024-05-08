@@ -64,6 +64,8 @@ body {
     font-weight: bold;
     text-align: center;
     animation: glow 1s infinite alternate; /* Glowing animation */
+    display: none;
+    
   }
   
   @keyframes glow {
