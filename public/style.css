@@ -226,8 +226,8 @@ body, html {
   .whatsapp-icon img {
     width: 60px;
     height: auto;
-    border-radius: 100px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 340px;
+    box-shadow: 0 4px 8px rgba(1, 0, 0, 0.9);
   }
   
   /* Animation */
@@ -249,10 +249,10 @@ body, html {
     }
   }
   
-  .whatsapp-icon img {
+  /* .whatsapp-icon img {
     animation: jump 2s infinite alternate;
   }
-  
+   */
  
    .whatsapp-icon img {
     animation: shake 2s infinite;
